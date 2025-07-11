@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+  </head>
+  <h3>Rock Paper Scissors</h3>
+  <button
+    onclick="
+  const random = Math.random();
+  let computer = '';
+  
+
+  if(random >= 0 && random < 1/3){
+    computer = 'rock';
+  } else if (random >= 1/3 && random < 2/3) {
+    computer = 'paper';
+  } else {
+    computer = 'scissors';
+  }
+
+  console.log(computer);
+
+
+  let result = '';
+
+  if(computer === 'rock'){
+    result = 'tie';
+  } else if (computer === 'paper') {
+    result = 'you lose';
+  } else if (computer === 'scissors'){
+    result = 'you win';
+  }
+
+  console.log(result);
+  "
+  >
+    Rock
+  </button>
+  <button>Paper</button>
+  <button>Scissors</button>
+
+  <body>
+    <script>
+      /*Strategy for javascript
+        1.Think about what steps we need
+        2.Convert those steps into code
+        */
+
+      /* Steps          <=== algorithm
+        when we click a button:
+
+        1. computer randomly selects a move
+        2. compare the moves to get the result
+        3. display the results in a popup
+    */
+
+      /*
+                1/3     2/3
+        0--------|--------|--------1
+            rock    paper   scissors
+
+        if between 0 and 1/3 => rock
+        if between 1/3 and 2/3 => paper
+        if between 2/3 and 1 => scissors
+
+
+    */
+
+      /*
+        Logical operations
+        AND operator: &&
+        OR operator : || 
+        NOT operator : !
+
+    */
+
+      //tip: var doesnt follow the rule of scopes
+    </script>
+  </body>
+</html>
