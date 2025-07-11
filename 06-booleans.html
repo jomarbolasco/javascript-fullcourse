@@ -22,6 +22,90 @@
       } else {
         console.log("you are young"); //called branches
       }
+
+      /*
+        Truthy and Falsy Values
+
+        FALSY VALUES
+        false 0 '' NaN undefined null
+        any value not on the list is truthy
+
+      */
+
+      // truthy value
+      if (5) {
+        console.log("truthy");
+      }
+
+      /*
+      cartQuantity = 5
+      cartQuantity > 0 : true
+      cartQuantity     : truthy
+      */
+
+      const cartqunatity = 5;
+
+      if (cartqunatity) {
+        console.log("has products");
+      } else {
+        console.log("empty");
+      }
+
+      // NaN = Not a Number
+      console.log("text" / 5);
+
+      //undefined = something doesnt have a value
+      let num;
+      console.log(num);
+
+      /*shortcuts for if-statements
+        -Ternary Operator
+        -Guard operator &&
+        -Default Operator ||
+      */
+
+      //ternary operator
+      const result = true ? "truthy" : "falsy";
+      console.log(result);
+
+      /*
+      AND operator &&
+      value1 && value2
+      -checks if 2 sides are both truthy
+      */
+
+      /*
+      Short-Circuit Evaluation = false && value2
+      -stops early
+      -Doesn't need to run the code on the right
+      */
+
+      //guard operator
+      true && console.log("hello");
+
+      //shortcut of this code
+      const condition = true;
+      if (condition) {
+        console.log("hello");
+      }
+
+      /*
+        OR operator ||
+        value1 || value2
+        -checks if at least 1 side is truthy
+      */
+
+      //default operator
+      const currency = undefined || "USD";
+      console.log(currency);
+
+      //shortcut code of this
+      let curren;
+      const condi = true;
+
+      if (!condi) {
+        curren = "USD";
+      }
     </script>
   </body>
 </html>
