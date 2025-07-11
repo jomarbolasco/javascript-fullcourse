@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>exercise</title>
+  </head>
+  <h3>exercises</h3>
+  <p>
+    6d. Create a variable called 'hour' and save the cuurent hour of the day
+    (use 24-hour format and save it as a number between 0 and 23).
+  </p>
+  <ul>
+    <li>if hour is between 6 and 12, display 'good morning!' in the console</li>
+    <li>
+      if hour is between 12 and 17, display 'good afternoon!' in the console
+    </li>
+    <li>otherwise, display 'good night!' in the console</li>
+  </ul>
+
+  <p>
+    6e. continuing from 1, try changing the value in the 'hour' variable to make
+    it display different messages
+  </p>
+
+  <p>
+    3. continuing from 1, Create a variable called 'name' and save your name
+    inside (as astring). update the if-statment to display your name in each
+    message. for example 'GOod morning name
+  </p>
+  <p>6f. Generate a random number with Math.random(). Save it in variable.</p>
+  <p>6g. create an if-statement and check:</p>
+  <ul>
+    <li>
+      if the number is less than 0.5, then display 'heads' in the console.
+    </li>
+    <li>else display 'tails', in the console</li>
+  </ul>
+  <p>
+    6h. instead of displaying 'heads' or 'tails' in the console, save the result
+    in a variable called 'result'.
+  </p>
+  <p>
+    6i. let's say we're trying to guess the result. create a variable called
+    'guess' and save your guess('heads' or 'tails')
+  </p>
+
+  <ul>
+    <li>if your guess matches the result, display 'you win!' in the console</li>
+    <li>if your guess does not match the result, display 'ypu lose!'</li>
+  </ul>
+
+  <p>
+    6j. (challenge)instead of using if-statements in the previous exercises, try
+    switching them into ternary operators
+  </p>
+
+  <h4>
+    head or tails
+    <button
+      onclick="
+    const random = Math.random();
+    let result = '';
+    const hula = 'tails';
+
+    if(random <= 0.5){
+        result = 'heads';
+    } else {
+        result = 'tails';
+    }
+
+    if(result === hula){
+        console.log('you win!');
+    } else {
+        console.log('you lose!');
+    }
+
+
+  "
+    >
+      tails
+    </button>
+    <button
+      onclick="
+    random = Math.random();
+    result = '';
+    hula = 'tails';
+
+    if(random <= 0.5){
+        result = 'heads';
+    } else {
+        result = 'tails';
+    }
+
+    if(result === hula){
+        console.log('you win!');
+    } else {
+        console.log('you lose!');
+    }
+
+
+  "
+    >
+      heads
+    </button>
+  </h4>
+  <br />
+  <h4>
+    heads or tails but ternary codes
+    <button
+      onclick="
+      const randomTerna = Math.random();
+      const hulaTerna = 'tails';
+        randomTerna <= 0.5 ? result = 'heads' : result = 'tails';
+        result === hulaTerna ? console.log('you win!') : console.log('you lose!');
+        "
+    >
+      tails
+    </button>
+    <button
+      onclick="
+     randomTerna = Math.random();
+     hulaTerna = 'tails';
+        randomTerna <= 0.5 ? result = 'heads' : result = 'tails';
+        result === hulaTerna ? console.log('you win!') : console.log('you lose!');
+        "
+    >
+      heads
+    </button>
+  </h4>
+
+  <body>
+    <script>
+      const hour = 23;
+      const name = "jomar";
+
+      if (hour >= 6 && hour < 12) {
+        console.log(`Good morning ${name}`);
+      } else if (hour >= 12 && hour < 17) {
+        console.log(`Good affternoon ${name}`);
+      } else {
+        console.log(`Good evening ${name}`);
+      }
+    </script>
+  </body>
+</html>
