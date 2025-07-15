@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>function exrcise</title>
+  </head>
+  <body>
+    <h1>exrcise</h1>
+
+    <p>
+      7a. Create a function called 'greet' that displays the message 'hello!' in
+      the console/ call / runn this function a few times using: greet();
+    </p>
+    <p>
+      7b. continuing from 7a, add a parameter called 'name' to the 'greet'
+      function nand display the message: 'hello ${name}!' Call the function a
+      few times with different names: greet('simon');
+    </p>
+    <p>
+      7c. Try calling the freet() without a name(it will display 'Hello
+      undefined!'). Modify the function so that if 'name' is undefined, it will
+      display 'Hi there!' instead. (Hint: use an if-statement.since udefined is
+      a falsy value, you can use: if (!name){...} to check if 'name'is
+      undefined).
+    </p>
+
+    <p>
+      7d. Create a function 'convertToFahrenheit(celsius)' that takes a number
+      in degrees Celsius and returns a number in degrees Fahrenheit.
+    </p>
+
+    <ul>
+      <li>Formula: Fahrenheit = (Celsius * 9 / 5) + 32</li>
+      <li>convertToFahrenheit(25)=> 77</li>
+    </ul>
+
+    <p>
+      7e. Crete a function 'convertToCelsius(fahrenheit)' that takes a number in
+      degrees Fahrenheit and returns a number in degrees Celsius.
+    </p>
+    <ul>
+      <li>Formula: Celsius = (Fahrenheit - 32) * 5 / 9</li>
+      <li>convertToCelsius(86)=> 30</li>
+    </ul>
+
+    <p>
+      7f.Create a function 'convertTemperature(degrees, unit)' that takes a
+      number and a unit('C' or 'F'), and converts it into the other unit.
+    </p>
+    <ul>
+      <li>convertTemperature(25, 'C') => '77F'</li>
+      <li>convertTemperature(86, 'F') => '30C'</li>
+    </ul>
+    <p>Note: return a string, and try to reuse the function from 7d and 73.</p>
+
+    <p>
+      7g. Create a function convertLength(lenth, from, to) that takes a number
+      and unit ('km' or 'miles') and converts the length to another unit ('km'
+      or 'miles'). <b>Note:</b> 1 mile = 1.6 km (approximately).
+    </p>
+    <ul>
+      <li>convertLength(50, 'miles', 'km') => '80 km'</li>
+      <li>convertLength(32, 'km', 'miles') => '20 km'</li>
+      <li>convertLength(50, 'km', 'km') => '50 km'</li>
+    </ul>
+
+    <p>
+      7h. Update convertLength to support converting between km, miles, and also
+      feet. <b>Note: </b>1 mile = 5280ft, 1km = 3281 ft (approximateley).
+    </p>
+    <ul>
+      <li>convertLength(5, 'miles', 'km') => '8km'</li>
+      <li>convertLength(5, 'miles', 'ft') => '8km'</li>
+      <li>convertLength(5, 'km', 'ft') => '8km'</li>
+    </ul>
+
+    <p>
+      7i. Update convertLength so that if you give it an invalid unit, it will
+      return 'Invalid unit: ${unit}'.
+    </p>
+    <ul>
+      <li>convertLength(5, 'lbs', 'lbs') => invalid unitL lbs</li>
+    </ul>
+    <script>
+      const name = "";
+
+      greet("jomar");
+      greet("kristine");
+      greet();
+      function greet(name) {
+        if (!name) {
+          console.log("Hi There!");
+        } else {
+          console.log(`Hello ${name}`);
+        }
+      }
+
+      function convertToFarenheit(celcius) {
+        return (celcius * 9) / 5 + 32;
+      }
+
+      console.log(convertToFarenheit(25));
+
+      function convertToCelsius(fahrenheit) {
+        return ((fahrenheit - 32) * 5) / 9;
+      }
+
+      console.log(convertToCelsius(86));
+
+      function convertTemperature(degrees, unit) {
+        if (unit === "C" || unit === "c") {
+          console.log(convertToCelsius(degrees) + "C");
+        } else if (unit === "F" || unit === "f") {
+          console.log(convertToFarenheit(degrees) + "F");
+        }
+      }
+
+      convertTemperature(25, "f");
+      convertTemperature(86, "C");
+
+      function convertLength(length, from, to) {}
+    </script>
+  </body>
+</html>
