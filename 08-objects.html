@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>objects</title>
+  </head>
+  <body>
+    <h1>OBJECTS</h1>
+    <p>let us group multiple values together</p>
+    <p>let us use multiple values together</p>
+
+    <script>
+      const product = {
+        name: "sardines",
+        price: 30,
+      };
+
+      console.log(product);
+      console.log(product.name);
+      console.log(product.price);
+
+      product.name = "surf";
+      console.log(product);
+
+      //adding new property in the object
+
+      product.newProduct = true;
+      product.tanduay = 160;
+      console.log(product);
+
+      //delete product in the object
+      delete product.newProduct;
+      console.log(product);
+    </script>
+  </body>
+</html>
