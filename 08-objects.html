@@ -9,6 +9,32 @@
     <h1>OBJECTS</h1>
     <p>let us group multiple values together</p>
     <p>let us use multiple values together</p>
+    <p>JSON built-in Object</p>
+    <ul>
+      <li>help us work with JSON</li>
+      <li>JSON means JavaScript Object Notation</li>
+      <li>similar to javascript object</li>
+      <li>but has less feature</li>
+    </ul>
+    <br />
+    <p>Built-in JSON Object</p>
+    <p>Convert:</p>
+    <ul>
+      <li>JavaScript Object => JSON ( JSON.stringify() )</li>
+
+      <li>JSON => JavaScript Object ( JSON.parse() )</li>
+    </ul>
+    <br />
+    <p>localStoreage built-in object</p>
+    <ul>
+      <li>save values more permanently</li>
+    </ul>
+
+    <p>localStoreage syntax</p>
+    <ul>
+      <li>localStorage.setItem('string' , 'value')</li>
+      <li>localStoreage.getItem('string')</li>
+    </ul>
 
     <script>
       const product = {
@@ -32,6 +58,33 @@
       //delete product in the object
       delete product.newProduct;
       console.log(product);
+
+      //other way to access te value inside the objects
+      //bracket notation
+
+      const product2 = {
+        name: "ballpen",
+        price: 8,
+        //nested object, an object inside an object
+        rating: {
+          stars: 4.5,
+          count: 69,
+        },
+        //can also nested a function
+        //function inside the object called method
+        fun: function function1() {
+          console.log("function inside the object");
+        },
+      };
+
+      console.log(product2.rating.count);
+      product2.fun();
+
+      //convert javascript object to JSON
+      console.log(JSON.stringify(product2));
+
+      const jsonString = JSON.stringify(product2);
+      console.log(JSON.parse(jsonString));
     </script>
   </body>
 </html>

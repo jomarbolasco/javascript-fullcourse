@@ -20,7 +20,7 @@
       const score = {
         wins: 0,
         losses: 0,
-        ties: 0,
+        tie: 0,
       };
 
       function playGame(playerMove) {
@@ -28,18 +28,20 @@
 
         let result = "";
 
-        if (playerMove === "rock") {
-          if (computer === "rock") {
-            result = "tie";
-          } else if (computer === "paper") {
-            result = "you lose";
-          } else if (computer === "scissors") {
-            result = "you win";
-          }
+        if (computer === "rock") {
+          result = "tie";
+          score.tie++;
+        } else if (computer === "paper") {
+          result = "you lose";
+          score.losses++;
+        } else if (computer === "scissors") {
+          result = "you win";
+          score.wins++;
         }
 
         console.log(
-          `you picked ${playerMove}, computer picked ${computer},${result}`
+          `you picked ${playerMove}, computer picked ${computer},${result}
+          score: wins:${score.wins} losses:${score.losses} tie:${score.tie}`
         );
       }
 
