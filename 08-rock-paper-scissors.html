@@ -8,10 +8,14 @@
 
   <body>
     <h3>rock paper scissors</h3>
-    <button onclick="proccess('rock')">Rock</button>
+    <button onclick="proccess('rock')">rock</button>
     <button onclick="proccess('paper')">paper</button>
     <button onclick="proccess('scissors')">scissors</button><br /><br />
-
+    <br /><br /><button
+      onclick="score.wins = 0, score.losses = 0, score.tie = 0"
+    >
+      reset
+    </button>
     <script>
       let result = "";
       const score = JSON.parse(localStorage.getItem("score")) || {
