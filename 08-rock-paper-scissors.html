@@ -12,9 +12,15 @@
     <button onclick="proccess('paper')">paper</button>
     <button onclick="proccess('scissors')">scissors</button>
     <script>
+      let result = "";
+      const score = {
+        wins: 0,
+        losses: 0,
+        tie: 0,
+      };
+
       function proccess(userPick) {
         const compPick = computerMove();
-        let result = "";
 
         if (userPick === "rock") {
           if (compPick === "rock") {
@@ -45,7 +51,17 @@
             result = "tie";
           }
         }
-        alert(`You ${result}!`);
+
+        if (result === "win") {
+          score.wins++;
+        } else if (result === "losses") {
+          score.losses++;
+        } else if (result === "tie") {
+          score.tie++;
+        }
+
+        alert(`You ${result}!
+WIN:${score.wins} LOSSES:${score.losses} TIE:${score.tie}`);
       }
 
       function computerMove() {
