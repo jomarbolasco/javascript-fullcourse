@@ -40,6 +40,7 @@
       const product = {
         name: "sardines",
         price: 30,
+        text: "hello",
       };
 
       console.log(product);
@@ -85,6 +86,27 @@
 
       const jsonString = JSON.stringify(product2);
       console.log(JSON.parse(jsonString));
+
+      //distructuring
+      const { name, price, text } = product;
+      console.log(name);
+      console.log(price);
+      console.log(text);
+
+      //shortHand Property
+      const object1 = {
+        text,
+        //  method: function function1() {
+        //   console.log("method");
+        // },
+        method() {
+          //shorthHand method syntax
+          console.log("method");
+        },
+      };
+
+      console.log(object1);
+      object1.method();
     </script>
   </body>
 </html>
