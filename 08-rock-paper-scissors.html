@@ -10,10 +10,11 @@
     <h3>rock paper scissors</h3>
     <button onclick="proccess('rock')">Rock</button>
     <button onclick="proccess('paper')">paper</button>
-    <button onclick="proccess('scissors')">scissors</button>
+    <button onclick="proccess('scissors')">scissors</button><br /><br />
+
     <script>
       let result = "";
-      const score = {
+      const score = JSON.parse(localStorage.getItem("score")) || {
         wins: 0,
         losses: 0,
         tie: 0,
@@ -59,6 +60,8 @@
         } else if (result === "tie") {
           score.tie++;
         }
+
+        localStorage.setItem("score", JSON.stringify(score));
 
         alert(`You ${result}!
 WIN:${score.wins} LOSSES:${score.losses} TIE:${score.tie}`);
