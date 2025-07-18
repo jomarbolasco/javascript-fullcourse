@@ -14,36 +14,38 @@
     <script>
       function proccess(userPick) {
         const compPick = computerMove();
+        let result = "";
 
         if (userPick === "rock") {
           if (compPick === "rock") {
-            console.log("tie");
+            result = "tie";
           } else if (compPick === "paper") {
-            console.log("losses");
+            result = "losses";
           } else if (compPick === "scissors") {
-            console.log("win");
+            result = "win";
           }
         }
 
         if (userPick === "paper") {
           if (compPick === "rock") {
-            console.log("losses");
+            result = "losses";
           } else if (compPick === "paper") {
-            console.log("tie");
+            result = "tie";
           } else if (compPick === "scissors") {
-            console.log("win");
+            result = "win";
           }
         }
 
         if (userPick === "scissors") {
           if (compPick === "rock") {
-            console.log("losses");
+            result = "losses";
           } else if (compPick === "paper") {
-            console.log("win");
+            result = "win";
           } else if (compPick === "scissors") {
-            console.log("tie");
+            result = "tie";
           }
         }
+        alert(`You ${result}!`);
       }
 
       function computerMove() {
