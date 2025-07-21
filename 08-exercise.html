@@ -29,6 +29,32 @@
       is less expensive. Create 2 products and try out the function.
     </p>
 
+    <p>
+      8e. Create a function 'isSameProduct(product1, product2)', which returns
+      true if 2 products have the same values inside('name' and 'price'). if
+      not, return false. Create 2 products and try out the function. (Hint:
+      objects are references so you can't compare them directly).
+    </p>
+    <p>
+      8f. Using Google or an AI rool. search how to convert a string to all
+      lowercase woth javascript ('Good Morning' => 'testtest')
+    </p>
+    <p>
+      8g. search how to repeat a string many times('test' 2 times ==>
+      'restttest')
+    </p>
+    <p>
+      8h.we'll add local storage to the calcualtor project. first make a copy of
+      the project from exercise 7j (see the solution for 7j if needed).
+    </p>
+    <ul>
+      <li>whenever we update the calculation, save it using .setitem().</li>
+      <li>when the page first loads, get the calculation using .getitem().</li>
+      <li>
+        use default value of '' if calculation doesnt exist in local storage
+      </li>
+    </ul>
+
     <script>
       //8a
       const product = {
@@ -66,6 +92,19 @@
         price: 160,
       };
       console.log(comparePrice(product1, product2));
+
+      //8e
+      const eProduct1 = {
+        name: "Coke",
+        Price: 50,
+      };
+
+      const eProduct2 = {
+        name: "Cobra",
+        Price: 20,
+      };
+
+      function isSameProduct(eProduct1, eProduct2) {}
     </script>
   </body>
 </html>
