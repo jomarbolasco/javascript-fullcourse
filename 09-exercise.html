@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM exercise</title>
+  </head>
+  <body>
+    <h1>lesson 9 exercise</h1>
+    <button
+      class="abutton"
+      onclick="console.log(document.querySelector('.abutton').innerHTML)
+      "
+    >
+      9a
+    </button>
+    <br /><button
+      class="bbutton"
+      onclick="document.querySelector('.bbutton').innerHTML = '9b done!'"
+    >
+      9b
+    </button>
+    <br /><br />
+    <button class="head" onclick="display('head')">head</button
+    ><button class="tails" onclick="display('tails')">tails</button>
+    <p class="display"></p>
+
+    <input placeholder="name" class="js-input" onkeydown="onkey(event)" />
+    <button class="js-submitButton" onclick="subButton()">Submit</button>
+    <p class="js-displayName"></p>
+
+    <script>
+      function onkey(event) {
+        if (event.key === "Enter") {
+          subButton();
+        }
+      }
+
+      function subButton() {
+        const input = document.querySelector(".js-input");
+        const display = document.querySelector(".js-displayName");
+
+        display.innerHTML = input.value;
+      }
+
+      function display(value) {
+        const display = document.querySelector(".display");
+
+        if (value === "head") {
+          display.innerHTML = "you choose: head";
+        } else if (value === "tails") {
+          display.innerHTML = "you choose: tails";
+        }
+      }
+    </script>
+  </body>
+</html>
